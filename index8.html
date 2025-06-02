@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<div id="header"></div>
+
+
+<script>
+  fetch("index.html")
+    .then(r => r.text())
+    .then(t => {
+      const match = t.match(/<header[^>]*>[\s\S]*?<\/header>/i);
+      if (match) {
+        document.getElementById("header").outerHTML = match[0];
+      }
+    });
+
+</script>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    fetch("index.html")
+      .then(r => r.text())
+      .then(t => document.getElementById("title").title = t)
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+
+
+
+
+<body style="font-family: 'Inter',sans-serif; background-color: #f5f5f7">
+<div class="highlighted-text">
+  je Reihe von links nach rechts (alle 2011, bis auf Nr. 6 = 2010): 1) a man in the mirror / 2) a woman in the mirror / 3) the animal farm / 4) Du hast die Wahl (1-4: 25,5 x 25,5) / 5) gefülltes Blatt (H 43,5, B 30, L ca. 65) / 6) erdverknöpft - herzhaft wachsen (30x45,5) / 7) remember the summer (49,5x60) / 8) Meer-Mandala (40x40)
+  <div class="image-container">
+    <button id="prevBtn" class="prev">&#8592; Prev</button>
+    <img id="img" src="img/Index8/B-INST-a_man_in_the_mirror.jpg">
+    <button id="nextBtn" class="next">&#8594; Next</button>
+  </div>
+  <script src="js/index8.js"></script>
+</div>
+</body>
+
+</html>

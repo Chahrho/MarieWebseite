@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<div id="header"></div>
+
+
+<script>
+  fetch("index.html")
+    .then(r => r.text())
+    .then(t => {
+      const match = t.match(/<header[^>]*>[\s\S]*?<\/header>/i);
+      if (match) {
+        document.getElementById("header").outerHTML = match[0];
+      }
+    });
+
+</script>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    fetch("index.html")
+      .then(r => r.text())
+      .then(t => document.getElementById("title").title = t)
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+
+
+
+
+
+<body style="font-family: 'Inter',sans-serif; background-color: #f5f5f7">
+<div class="highlighted-text">
+
+  <p>
+    <span class="text-bold">
+    Viele nennen mich/kennen mich als "verrücktes Huhn".
+      </span>
+Ich selbst würde da durchaus auch in Richtung "blindes Huhn" gehen, was nicht nur mit meiner Altersweitsichtigkeit zu tun hat ;-) Die nachfolgenden Bilder stammen jedenfalls alle aus einer Blindmal-Serie von 2008 (Acryl 44x64).
+
+
+    <div class="slider">
+  <div class="image-container">
+  <button id="prevBtn" class="prev">&#8592; Prev</button>
+  <img id="img" src="img/Index7/B-BLIND-blind_sehend.jpg">
+  <button id="nextBtn" class="next">&#8594; Next</button>
+    </div>
+</div>
+    <script src="js/index7.js"></script>
+  <span style="font-size: 12px">
+je Reihe von links nach rechts: 1) von blind zu sehend / 2) Menschenmenge (zu Trommelmusik entstanden) / 3) watching you blind / 4) blind sehend
+  </span>
+  </p>
+
+
+<p>
+<span class="text-bold">
+Wer immer tut, was er schon kann,
+bleibt immer das, was er schon ist.</span>
+  <span style="font-size: 12px">Henry Ford, Gründer der Ford Motor Company
+    </span>
+</p>
+  </div>
+</body>
+
+</html>

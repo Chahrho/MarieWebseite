@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js" lang="" xmlns="http://www.w3.org/1999/html">
+
+<div id="header"></div>
+
+
+<script>
+  fetch("index.html")
+    .then(r => r.text())
+    .then(t => {
+      const match = t.match(/<header[^>]*>[\s\S]*?<\/header>/i);
+      if (match) {
+        document.getElementById("header").outerHTML = match[0];
+      }
+    });
+
+</script>
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="img/img.png" sizes="any">
+  <link rel="icon" href="img/img.png" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/img.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+
+
+
+<body style="font-family: 'Inter',sans-serif; background-color: #f5f5f7">
+<div class="highlighted-text">
+  <div class="center-container">
+    <p>
+      <span class="">Oberflächlich betrachtet könnte man mich so beschreiben:</span>
+
+    kreativ, bunt, crazy, leicht chaotisch, ein Sonnenschein, optimistisch, lebenslustig, selten ruhig = kommunikativ ;-)
+
+      <span class="underlined-text-bold">Wer mich näher kennt, würde u.a. aber auch folgendes über mich sagen:</span>
+
+    nachdenklich, sensibel, verletzlich, reflektiert, selten, aber doch auch einmal zornig
+
+
+      Nicht jeder kennt diese - unbestritten - sehr unterschiedlichen Seiten von mir, weil ich sie nicht immer bzw. durchaus selektiv zeige. Diese Webpages brechen insofern damit, da sie ganz mich selbst bzw. das Ergebnis davon zeigen. Denn künstlerisches Gestalten ist nicht nur eine Ausdrucksmöglichkeit seiner Kreativität sondern auch ein Mittel, sich besser kennen zu lernen und neu zu erfahren. Ob man will, oder nicht, das Unterbewusstsein gestaltet immer mit. Man(n)/Frau gibt daher automatisch auch Persönliches preis.
+
+      <img src="img/ole.jpg"/>
+
+    </p>
+    <p>
+      <span class="text-bold">Wer nach außen schaut,</span>
+      <span class="text-bold">träumt.Wer nach innen sieht, erwacht.</span>
+      <span style="font-size: 14px"> Gustav Jung, schweizer Psychiater </span>
+
+      <span class="text-bold">Nur wer sich ändert, bleibt sich treu.</span>
+      <span style="font-size: 14px"> Wolf Biermann, deutscher Liedermacher und Lyriker </span>
+
+    </p>
+  </div>
+</div>
+</body>
+
+</html>

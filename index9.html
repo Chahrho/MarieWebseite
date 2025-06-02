@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<div id="header"></div>
+
+
+<script>
+  fetch("index.html")
+    .then(r => r.text())
+    .then(t => {
+      const match = t.match(/<header[^>]*>[\s\S]*?<\/header>/i);
+      if (match) {
+        document.getElementById("header").outerHTML = match[0];
+      }
+    });
+
+</script>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    fetch("index.html")
+      .then(r => r.text())
+      .then(t => document.getElementById("title").title = t)
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+
+
+
+
+<body style="font-family: 'Inter',sans-serif; background-color: #f5f5f7">
+<div class="highlighted-text" style="width: 1055px; height: 250px">
+<div class="kontakt-Karte">
+   <h2>Kontaktdaten</h2>
+  <p><a href="mailto:marie-p@aon.at">📧 marie-p@aon.at</a></p>
+  <p><a href="tel:+4369910782268">📞+43 (699) 10 78 22 68 </a></p>
+  <p><a href="http://www.members.aon.at/marie-p"> 🌐www.members.aon.at/marie-p</a></p>
+
+</div>
+</div>
+</body>
+
+</html>
+

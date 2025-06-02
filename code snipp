@@ -1,0 +1,41 @@
+const images = [
+  "img/B-BEI-Die_tanzenden_Spermien.jpg",
+  "img/B-BEI-diversity.jpg",
+  "img/B-BEI-Heimat-NEU3.jpg",
+  "img/B-BEI-jungle.jpg",
+  "img/B-BEI-skyline.jpg",
+  "img/B-BEI-Stierblut-NEU.jpg",
+  "img/B-BEI-summer_99_-_Lucky_Strike_Limited_Edition.jpg",
+  "img/B-BEI-tropical_garden_NEU.jpg",
+];
+
+let currentIndex = 0;
+
+const nextButton = document.getElementById("nextBtn");
+const prevButton = document.getElementById("prevBtn");
+let image = document.getElementById("sliderImage");
+
+
+function changeImage(index){
+  image.src = images[index]
+}
+
+
+nextButton.addEventListener("click", () => {
+  if (currentIndex >= images.length -1 ){
+    currentIndex = images.length - 1;
+  }else{
+    currentIndex += 1;
+  }
+
+  changeImage(currentIndex);
+});
+
+prevButton.addEventListener("click", () => {
+  if (currentIndex <= 0){
+    currentIndex = 0;
+  }else{
+    currentIndex -= 1;
+  }
+  changeImage(currentIndex);
+});

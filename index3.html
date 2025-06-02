@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<div id="header"></div>
+
+
+<script>
+  fetch("index.html")
+    .then(r => r.text())
+    .then(t => {
+      const match = t.match(/<header[^>]*>[\s\S]*?<\/header>/i);
+      if (match) {
+        document.getElementById("header").outerHTML = match[0];
+      }
+    });
+
+</script>
+
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    fetch("index.html")
+      .then(r => r.text())
+      .then(t => document.getElementById("title").title = t)
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+
+
+
+
+<body style="font-family: 'Inter',sans-serif; background-color: #f5f5f7">
+<div class="highlighted-text">
+  <div class="center-container">
+    <p>
+Selbst.HILFE anstelle von Selbst.MITLEID
+Übernahme von Selbst.VERANTWORTUNG
+Steigerung von Selbst.LIEBE und Selbst.WERT
+Schluss auch mit der ewigen Selbst.BEHERRSCHUNG!
+
+SELBST.redend und SELBST.bewusst
+vom Mit- zum Selbst.LÄUFER
+von der Fremd- zur Selbst.BESTIMMUNG
+Selbst.BESTÄTIGUNG durch Selbst.VERWIRKLICHUNG!
+
+Selbst.BILD versus Fremdbild
+Selbst.GEISSELUNG versus Selbst.BEFREIUNG
+Was bleibt?
+Selbst.ICH – ich SELBST
+
+      <span style="padding-left: 450px; font-weight: bold">von Marie P. </span>
+    </p>
+<p style="font-size: 14px">
+      <span class="underlined-text">veröffentlicht in: </span>
+"Frankfurter Bibliothek - Jahrbuch für das neue Gedicht. Erste Abteilung / Gedicht und Gesellschaft 2011:22"
+
+Leopold von Emden (Vorwort, Herausgeber), Susann Fleischer (Bearbeitung), Anne Grimmeissen (Bearbeitung), Markus von Hänsel-Hohenhausen (Nachwort), Klaus Schmidt-Mäcon (Herausgeber)
+  </p>
+
+  </div>
+</div>
+</body>
+
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<div id="header"></div>
+
+
+<script>
+  fetch("index.html")
+    .then(r => r.text())
+    .then(t => {
+      const match = t.match(/<header[^>]*>[\s\S]*?<\/header>/i);
+      if (match) {
+        document.getElementById("header").outerHTML = match[0];
+      }
+    });
+
+</script>
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    fetch("index.html")
+      .then(r => r.text())
+      .then(t => document.getElementById("title").title = t)
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+
+
+
+
+<body style="font-family: 'Inter',sans-serif; background-color: #f5f5f7">
+<div class="highlighted-text">
+  <p>
+    <span class="text-bold">
+  Wer braucht schon Hilfsmittel zum Malen, wie z.B. Pinsel etc.? - Wenn er/sie ohnehin sich selbst als Instrument zur Verfügung hat ;-)
+    </span>
+    Die nachfolgenden Acryl-Werke sind lediglich mittels Körpereinsatz meiner Füße, Hände oder Finger entstanden. Das macht unheimlich viel Spaß - in etwa so, wie sich als Kind im Schlamm aalen ...
+
+  </p>
+
+
+  <div class="image-container">
+    <button id="prevBtn" class="prev">&#8592; Prev</button>
+    <img id="img" src="img/Index6/B-MIT-unique0.jpg">
+    <button  id="nextBtn" class="next">&#8594; Next</button>
+  </div>
+
+  <script src="js/index6.js"> </script>
+<span style="font-size: 12px">
+  je Reihe von links nach rechts: 1) unique - c'est moi, 2008 - 24x30 / 2) Fantasien, 2008 - 20x30 / 3) Klein(st)kunst, 2008 - 8x10 / 4) crowded, 2008 - 24x30 / 5) Leichtigkeit, 2011 - 70x100 / 6) Beschwingtheit, 2010 - 70x100
+</span>
+</div>
+</body>
+
+</html>

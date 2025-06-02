@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<div id="header"></div>
+
+
+<script>
+  fetch("index.html")
+    .then(r => r.text())
+    .then(t => {
+      const match = t.match(/<header[^>]*>[\s\S]*?<\/header>/i);
+      if (match) {
+        document.getElementById("header").outerHTML = match[0];
+      }
+    });
+
+</script>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    fetch("index.html")
+      .then(r => r.text())
+      .then(t => document.getElementById("title").title = t)
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+
+
+
+
+<body style="font-family: 'Inter',sans-serif; background-color: #f5f5f7">
+<div class="highlighted-text">
+<p class="text-bold">
+Was hinter uns liegt
+und was vor uns liegt,
+sind Belanglosigkeiten verglichen mit dem, was in uns selbst liegt.
+  <span style="font-size: 12px">Walt Emerson Baum, Künstler und Pädagoge</span>
+</p>
+
+Mit Besuch einer Gestaltpädagogik-Ausbildung 2008-2009 und regelmäßiger Kunsttherapie-Zyklen in der Kleingruppe seit 2010 konnte ich verschiedenste Methoden kennen lernen um wichtige anstehende Themen zu er- und verarbeiten bzw. meine verschiedenartigen Seiten und unterbewussten Gefühle los-/zuzulassen und auszuleben.
+
+Um einen kleinen Eindruck zu vermitteln, was dabei so alles Unterschiedliches entstehen kann, veröffentliche ich hier gerne auch vier Fotos (1-4) von Werken/Aktionen, die bei der Vernissage nicht besichtigt werden können.
+<p class="text-bold">
+  Kunst gibt nicht das Sichtbare wieder,
+  sondern macht sichtbar.
+  <span style="font-size: 12px"> Paul Klee, deutscher Maler </span>
+
+
+
+
+<div class="image-container">
+  <button id="prevBtn" class="prev">&#8592; Prev</button>
+  <img id="sliderImage" src="img/Index5/B-IN-Frau_sein-Ton.jpg"/>
+  <button id="nextBtn" class="next">&#8594; Next</button>
+</div>
+  <script src="js/index5JS.js"></script>
+
+</p>
+
+
+  <p style="font-size: 12px">
+   je Reihe von links nach rechts (5-8 Acryl): 1) Frau sein (Ton) / 2) Frau sein (Wellpappe) / 3) Puppenspiel / 4) Mein Lebens-Baum-Traum / 5) bewegt, 2010 - 36x50 / 6) die Kraft in mir, 2011 - 20x30 / 7) orange Lebensglück, 2011 - 36x50 / 8) übermütig durch die Lüfte, 2010 - 36x50
+</p>
+
+</div>
+
+</body>
+
+</html>
