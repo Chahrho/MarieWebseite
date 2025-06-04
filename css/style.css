@@ -16,6 +16,25 @@ tr, td{
   padding-left: 40px;
 }
 
+.images{
+
+}
+
+.images img{
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin-right: 5px;
+  box-shadow: 1px 1px 50px rgba(0,0,0,0.1);
+}
+
+.images img:hover{
+  height: 250px;
+  width: 250px;
+
+  transition: width 0.3s ease;
+  transition: height 0.3s ease;
+}
 
 p{
   white-space: pre-wrap;
@@ -45,7 +64,7 @@ p{
 }
 
 .underlined-text-bold{
-text-decoration: underline;
+  text-decoration: underline;
   font-weight: bold;
 }
 .green-text{
@@ -55,7 +74,7 @@ text-decoration: underline;
   font-weight: bold;
 }
 button{
-box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
   border-radius: 12px;
   width: 50px;
 }

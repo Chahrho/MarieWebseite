@@ -1,43 +1,36 @@
+
+
+let image1 = document.getElementById("1");
+let image2 = document.getElementById("2");
+let image3 = document.getElementById("3");
+let image4 = document.getElementById("4");
+let image5 = document.getElementById("5")
+let image6 = document.getElementById("6");
+let image7 = document.getElementById("7");
+let image8 = document.getElementById("8");
+
 const images = [
-  "img/Index4/B-BEI-Die_tanzenden_Spermien.jpg",
-  "img/Index4/B-BEI-diversity.jpg",
-  "img/Index4/B-BEI-Heimat-NEU3.jpg",
-  "img/Index4/B-BEI-jungle.jpg",
-  "img/Index4/B-BEI-skyline.jpg",
-  "img/Index4/B-BEI-Stierblut-NEU.jpg",
-  "img/Index4/B-BEI-summer_99_-_Lucky_Strike_Limited_Edition.jpg",
-  "img/Index4/B-BEI-tropical_garden_NEU.jpg",
-  "img/Index4/cat.jpg"
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8
 ];
 
-let currentIndex = 0;
-const prevButton = document.getElementById("prevBtn");
-const nextButton = document.getElementById("nextBtn");
-let currentImage = document.getElementById("sliderImage");
+let text = document.getElementById("text")
 
+for (let i = 0; i < images.length; i++){
+  let image = images.at(i);
 
-prevButton.addEventListener("click",() => {
-  if (currentIndex > 0){
-    currentIndex--;
-    showImage(currentIndex);
-  }else{
+  image.addEventListener("mouseenter", () => {
+    text.innerText = image.src;
+  })
 
-  }
-
-});
-
-
-nextButton.addEventListener("click",() => {
-  if (currentIndex <= images.length - 1){
-    currentIndex++;
-    showImage(currentIndex);
-  }else{
-    currentIndex = images.length - 1;
-    showImage(currentIndex);
-  }
-});
-
-
-function showImage(Index){
-  currentImage.src = images.at(Index);
 }
+
+
+
+
